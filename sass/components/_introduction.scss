@@ -1,0 +1,23 @@
+.introduction {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &.loading {
+    opacity: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: $color-light;
+    font-family: "Gilroy-ExtraBold";
+  }
+
+  p {
+    padding: 1.5rem 0 2.5rem;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 18px;
+    color: $color-light;
+  }
+}

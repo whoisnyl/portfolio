@@ -1,0 +1,52 @@
+.burger {
+  width: 38px;
+  height: 28px;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: -5px;
+  transition: transform 0.3s ease;
+
+  span {
+    background: $color-light;
+    display: block;
+    border-radius: 2px;
+    height: 2px;
+    width: calc(70% - 10px);
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -2px;
+
+    &:first-of-type {
+      top: 5px;
+      width: calc(100% - 10px);
+    }
+
+    &:last-of-type {
+      top: initial;
+      bottom: 5px;
+      width: calc(100% - 10px);
+    }
+  }
+
+  &.open {
+    transform: rotate(180deg);
+
+    span:nth-of-type(2) {
+      display: none;
+    }
+
+    span:first-of-type {
+      transform: rotate(45deg);
+      top: 15px;
+      height: 3px;
+    }
+
+    span:last-of-type {
+      transform: rotate(-45deg);
+      bottom: 12px;
+      height: 3px;
+    }
+  }
+}

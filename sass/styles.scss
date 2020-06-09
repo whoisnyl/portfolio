@@ -1,0 +1,22 @@
+@import "reset-css";
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/fonts";
+@import "./global/settings";
+
+@import "./utils/button";
+@import "./utils/burger";
+@import "./utils/title";
+@import "./utils/avatar";
+@import "./utils/menu";
+
+@import "./elements/header";
+@import "./elements/container";
+@import "./elements/footer";
+@import "./elements/sidebar";
+@import "./elements/inner";
+
+@import "./components/introduction";
+@import "./components/projects";
+@import "./components/about";
+@import "./components/contact";

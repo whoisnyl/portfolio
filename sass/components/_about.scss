@@ -1,0 +1,31 @@
+.about_header {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+
+  &-image {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+    margin: 0 auto;
+  }
+
+  &-name {
+    margin-top: 1rem;
+    font-size: 36px;
+    font-family: "Gilroy-ExtraBold";
+  }
+}
+
+.about_description {
+  padding: 2rem 0;
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,67 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include flex(row, wrap);
+  @include flex-justify(center);
+  margin: 0 -1rem;
+
+  .form-group {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 2rem;
+
+      &--mini {
+        width: 50%;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 20px;
+      line-height: 1.5;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 30px;
+      }
+    }
+
+    .input {
+      appearance: none;
+      border: 0;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      font-size: 16px;
+
+      &--textarea {
+        resize: none;
+        height: 150px;
+      }
+    }
+
+    .error {
+      color: $color-secondary;
+      font-size: 14px;
+      position: absolute;
+      top: 5px;
+      right: 21px;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &-show {
+        opacity: 1;
+      }
+    }
+  }
+
+  .main-error {
+    margin-top: 2rem;
+  }
+}

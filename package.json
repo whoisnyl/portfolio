@@ -1,0 +1,25 @@
+{
+  "name": "whoisnyl",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "graphql-request": "^2.0.0",
+    "next": "9.4.4",
+    "next-fonts": "^1.1.0",
+    "react": "16.13.1",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-datocms": "^1.2.5",
+    "react-dom": "16.13.1",
+    "react-hook-form": "^5.7.2",
+    "react-icons": "^3.10.0",
+    "react-lines-ellipsis": "^0.14.1",
+    "reset-css": "^5.0.1",
+    "sass": "^1.26.8"
+  }
+}

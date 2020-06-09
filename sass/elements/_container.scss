@@ -1,0 +1,21 @@
+main {
+  padding: 86px 1.5rem 100px;
+  position: relative;
+  min-height: 100vh;
+
+  .container {
+    position: relative;
+    max-width: 1700px;
+    margin: 0 auto;
+    z-index: 5;
+    padding: 3rem 0 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 118px 2.5rem 100px;
+
+    &.shrink {
+      width: 50%;
+    }
+  }
+}

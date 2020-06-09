@@ -1,0 +1,42 @@
+header {
+  position: absolute;
+  z-index: 150;
+  width: 100%;
+  left: 0;
+  padding: 1.5rem;
+  transition: all 0.5s ease;
+
+  @media screen and (min-width: 1200px) {
+    padding: 2.5rem;
+
+    &.shrink {
+      width: 50%;
+      top: 0;
+    }
+  }
+
+  .header {
+    @include flex(row);
+    @include flex-justify(space-between);
+    @include flex-align(center);
+
+    @media screen and (min-width: 1440px) {
+      max-width: 1700px;
+      margin: 0 auto;
+    }
+  }
+
+  &.header--fixed {
+    position: fixed;
+    top: -86px;
+    background-color: $color-secondary;
+
+    @media screen and (min-width: 1200px) {
+      top: -118px;
+    }
+
+    &_up {
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.projects {
+  padding: 4rem 0 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  @include flex("row", "wrap");
+
+  &_headline {
+    font-size: 20px;
+    padding: 0 1rem;
+  }
+
+  .projects-container {
+    margin-bottom: 1.5rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 1rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+
+    @media screen and (min-width: 1440px) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 -1rem;
+  }
+
+  &.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &.shrink {
+    @media screen and (min-width: 1200px) {
+      .projects-container {
+        @media screen and (min-width: 1200px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        @media screen and (min-width: 1440px) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+    }
+  }
+
+  .project-item {
+    background-color: rgba(224, 225, 255, 0.1);
+    border-radius: 6px;
+    padding: 1.5rem;
+    width: 100%;
+    position: relative;
+
+    &_details {
+      margin-bottom: 1.5rem;
+
+      &__title {
+        margin-bottom: 1rem;
+        font-size: 24px;
+        font-family: "Gilroy-ExtraBold";
+      }
+
+      &__description {
+        line-height: 1.5;
+        white-space: pre-wrap;
+      }
+    }
+  }
+}
+
+.project {
+  position: relative;
+
+  &_image {
+    position: relative;
+    border-radius: 0.5rem;
+
+    canvas {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0.5rem;
+      max-height: 500px;
+      width: 100%;
+    }
+  }
+
+  &_title {
+    padding: 1rem 0;
+    font-size: 24px;
+    font-family: "Gilroy-ExtraBold";
+
+    @media screen and (min-width: 1200px) {
+      padding: 2rem 0;
+      font-size: 30px;
+    }
+  }
+
+  &_description {
+    margin-bottom: 3rem;
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}

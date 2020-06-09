@@ -1,0 +1,33 @@
+footer {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  padding: 2rem 1rem;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s ease;
+
+  .social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_icon {
+      margin: 0 1.5rem;
+      font-size: 24px;
+      color: $color-light;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &.shrink {
+      width: 50%;
+      right: 0;
+    }
+  }
+}
