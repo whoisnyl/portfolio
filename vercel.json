@@ -1,7 +1,11 @@
 {
+  "env": {
+    "NEXT_DATOCMS_API_TOKEN": "@whoisnyl_token",
+    "NEXT_DATOCMS_PREVIEW_SECRET": "@whoisnyl_secret"
+  },
   "build": {
     "env": {
-      "NEXT_DATOCMS_API_TOKEN": "@whoisnyl"
+      "NEXT_DATOCMS_API_TOKEN": "@whoisnyl_token"
     }
   }
 }
