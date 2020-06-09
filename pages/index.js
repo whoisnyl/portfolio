@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { request } from "../lib/datocms";
+import { getHomePageData } from "../lib/datocms";
 
 import Layout from "../components/shared/layout";
 import { LayoutContext } from "../components/shared/context";
@@ -16,46 +16,6 @@ import Projects from "../components/project";
 import SpecificProject from "../components/project/specificProject";
 import About from "../components/about";
 import Contact from "../components/contact";
-
-const HOMEPAGE_QUERY = `query Homepage {
-  allProjects {
-    id
-    title
-    description
-    href
-    image {
-      url
-      alt
-    }
-  }
-  about {
-    name
-    description
-    occupation
-    introduction
-    image {
-      url
-      alt
-    }
-  }
-  site: _site {
-    favicon: faviconMetaTags {
-      attributes
-      content
-      tag
-    }
-  }
-}`;
-
-export async function getStaticProps() {
-  const data = await request({
-    query: HOMEPAGE_QUERY,
-    variables: { limit: 4 },
-  });
-  return {
-    props: { data },
-  };
-}
 
 export default function Home({ data }) {
   const {
@@ -79,7 +39,7 @@ export default function Home({ data }) {
   };
 
   return (
-    <Layout data={data.site}>
+    <Layout icon={data.site} meta={data.homePage}>
       <Header />
       <Container>
         <section className={`introduction ${isLoading ? "loading" : ""}`}>
@@ -111,4 +71,11 @@ export default function Home({ data }) {
       </Sidebar>
     </Layout>
   );
+}
+
+export async function getStaticProps({ preview = false }) {
+  const data = (await getHomePageData(preview)) || [];
+  return {
+    props: { data },
+  };
 }
