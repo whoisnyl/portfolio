@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { renderMetaTags } from "react-datocms";
 
-export default ({ children, data }) => (
+export default ({ children, icon, meta }) => (
   <div>
-    <Head>{renderMetaTags(data.favicon)}</Head>
+    <Head>{renderMetaTags(meta.seo.concat(icon.favicon))}</Head>
     {children}
   </div>
 );
