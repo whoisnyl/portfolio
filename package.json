@@ -9,7 +9,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "elliptic": "^6.5.3",
+    "elliptic": "^6.5.4",
     "graphql-request": "^2.0.0",
     "next": "^10.0.0",
     "next-fonts": "^1.4.0",
